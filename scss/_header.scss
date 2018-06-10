@@ -1,0 +1,33 @@
+@import "var";
+
+/* Header CSS */ 
+
+.header {
+  background: $lightblue;
+  .navbar {
+    max-width: 620px;
+    margin: 0 auto;
+    ul {
+      li {
+        float: left;
+        width: 30%;
+        margin-left: 2%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+        font-size: 24px;
+        a {
+          text-decoration: none;
+          color: $darkblue;
+        }
+      }
+      .active {
+        border-bottom: 5px solid $darkblue;
+        a {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+

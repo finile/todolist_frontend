@@ -1,0 +1,249 @@
+@import "var";
+
+/* Content CSS */ 
+.content {
+  background: $whitegray;
+  padding-top: 23px;
+  padding-bottom: 120px;
+  .type-area{
+    max-width: 620px;
+    margin: 0 auto;
+    background: $lightgray;
+    border-top-right-radius: 10px; 
+    border-top-left-radius:10px ;
+    .title-input{
+      border-bottom: 2px solid $mediumgray;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 32px;
+      .fa-square {
+        margin-right: 16px;
+        font-size: 25px;
+        color: $white;
+      }
+      input {
+        font-size: 24px;
+        width: 50%;
+      }
+      .fa-star, .fa-pencil-alt {
+        float: right;
+        margin-right: 32px;
+        font-size: 25px;
+      }
+      .fa-pencil-alt {
+        color: $lightblue;
+      }
+    }
+    .time-input{
+      padding-left: 32px;
+      padding-top: 20px;
+      h3{
+        font-size: 20px;
+        i{
+          margin-right: 10px;
+        }
+      }
+      input{
+        margin-top: 10px;
+        margin-left: 20px;
+      }
+    }
+    .file{
+      padding-left: 32px;
+      padding-top: 20px;
+      h3{
+        font-size: 20px;
+        i{
+          margin-right: 10px;
+        }
+      }
+      .file-upload{
+        font-size: 30px;
+        color:$mediumgray;
+        margin-top: 10px;
+        margin-left: 20px;
+        #file-input{
+          display: none;
+        }
+      }
+    }
+    .comment-input{
+      padding-left: 32px;
+      padding-top: 20px;
+      h3{
+        font-size: 20px;
+        i{
+          margin-right: 10px;
+        }
+      }
+      textarea{
+        margin-top: 10px;
+        margin-left: 20px;
+        margin-bottom: 24px;
+      }
+    }
+  }
+  .input-button{
+    max-width: 620px;
+    margin: 0 auto;
+    ul{
+      li{
+        float: left;
+        width: 50%;
+        .cancel-button, .add-button {
+          width: 100%;
+          font-size: 20px;
+          border: none;
+          padding-top: 20px;
+          padding-bottom: 20px;
+          i{
+            margin-right: 15px;
+          }
+        }
+        .cancel-button{
+          color:$red;
+          border-bottom-left-radius:10px ;
+        }
+        .add-button {
+          color:$white;
+          background: $lightblue;
+          border-bottom-right-radius: 10px; 
+        }
+      }
+    }
+  }
+  .add-task{
+    max-width: 620px;
+    margin: 0 auto;
+    border-radius: 5px;
+    border:1px solid $whitegray;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 32px;
+    background: $white;
+    h2{
+      color:$mediumgray;
+      font-size: 25px;
+
+    }
+  }
+  .list {
+    max-width: 620px;
+    margin: 0 auto;
+    .todo-list-star{
+      border-radius: 10px;
+      margin-top: 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 32px;
+      background: $lightorange;
+      .todo-list-title{
+        .fa-square {
+          margin-right: 16px;
+          font-size: 25px;
+          color: $white;
+        }
+        p {
+          font-size: 20px;
+        }
+        .fa-star, .fa-pencil-alt {
+          float: right;
+          margin-right: 32px;
+          font-size: 20px;
+        }
+        .fa-star {
+          color: $orange;
+        }
+      }
+      .todo-list-cont{
+        padding-top: 15px;
+        padding-left: 40px;
+        a{
+          color:$gray;
+          i{
+            padding-left: 10px;
+            padding-right: 5px;
+          }
+        }
+      }
+    }
+    .todo-list{
+      border-radius: 10px;
+      margin-top: 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 32px;
+      background: $lightgray;
+      .todo-list-title{
+        .fa-square {
+          margin-right: 16px;
+          font-size: 25px;
+          color: $white;
+        }
+        p {
+          font-size: 20px;
+        }
+        .fa-star, .fa-pencil-alt {
+          float: right;
+          margin-right: 32px;
+          font-size: 20px;
+        }
+      }
+      .todo-list-cont{
+        padding-top: 15px;
+        padding-left: 40px;
+        a{
+          color:$gray;
+          i{
+            padding-left: 10px;
+            padding-right: 5px;
+          }
+        }
+      }
+    }
+    .todo-list-delete{
+      border-radius: 10px;
+      margin-top: 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 32px;
+      background: $lightgray;
+      .todo-list-title{
+        .fa-square {
+          margin-right: 16px;
+          font-size: 25px;
+          color: $white;
+        }
+        p {
+          font-size: 20px;
+          del{
+            color: $mediumgray;
+          }
+          .fa-star, .fa-pencil-alt {
+            float: right;
+            margin-right: 32px;
+            font-size: 20px;
+          }
+        }
+      }
+      .todo-list-cont{
+        padding-top: 15px;
+        padding-left: 40px;
+        a{
+          color:$gray;
+          i{
+            padding-left: 10px;
+            padding-right: 5px;
+          }
+        }
+      }
+    }
+    h3 {
+      margin-top: 20px;
+      padding-left: 30px;
+      color: $mediumgray;
+      font-size: 20px;
+    }
+  }
+}
