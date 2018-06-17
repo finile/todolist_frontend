@@ -8,132 +8,172 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <link rel="stylesheet" href="css/all.css">
     <!-- 瀏覽器Tab設定-->
-    <title>No1.ToDoList</title>
+    <title>HaveFun</title>
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <!-- boostrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
   </head>
   <body>
+    <!-- Header -->
     <div class="wrap">
       <div class="header">
-        <div class="navbar">
-          <ul class="menu">
-            <li class="active"><a href="index.html">My Tasks</a></li>
-            <li><a href="progress.html">In Progress</a></li>
-            <li><a href="completed.html">Completed</a></li>
-          </ul>
-          <div class="clearfix"></div>
+        <div class="row">
+          <!-- Logo -->
+          <div class="col col-lg-3 col-md-4 col-12 logo">
+            <h1>
+              <a href="index.html">Hex School</a>
+            </h1>
+          </div>
+          <!-- Search Bar -->
+          <div class="col col-lg-9 col-md-8 col-12 searchbar" >
+            <div class="search">
+              <span><i class="fas fa-search"></i></span>
+              <input type="text" placeholder="Explore your own actvities">
+            </div>
+          </div>
         </div>
       </div>
+      <!-- Content -->
       <div class="content">
-        <div class="enter-form">
-          <div class="type-area">
-            <div class="title-input">
-              <i class="far fa-square"></i>
-              <input type="text" placeholder="Type Something Here ...">
-              <i class="fas fa-pencil-alt"></i>
-              <i class="far fa-star"></i>
-            </div>
-            <div class="time-input">
-              <h3><i class="far fa-calendar-alt"></i>Deadline</h3>
-              <input type="date" >
-              <input type="time" >
-            </div>
-            <div class="file">
-              <h3><i class="far fa-file"></i>File</h3>
-              <div class="file-upload">
-                <label for="file-input">
-                  <i class="far fa-plus-square"></i>
-                </label>
-                <input id="file-input" type="file"/>
+        <div class="row">
+          <!-- Search Condition -->
+          <div class="col col-lg-3 col-md-4 col-12 leftsearch">
+            <div class="location">
+              <h3>
+                Location
+                <button class="showmenu">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </h3>
+              <div class="locationselect">
+                <select>
+                  <option value="volvo">Taiwan</option>
+                  <option value="saab">Hsinchui</option>
+                  <option value="opel">Taichung</option>
+                  <option value="audi">Kaohsiung</option>
+                </select>
               </div>
             </div>
-            <div class="comment-input">
-              <h3><i class="far fa-comment-dots"></i>Comment</h3>
-              <textarea rows="4" cols="50" name="comment" form="usrform" placeholder="Enter text here..."></textarea>
+            <hr>
+            <div class="date">
+              <h3>
+                Date
+                <button class="showmenu">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </h3>
+              <div class="dateinput">
+                <span>from</span><input type="date" ><br>
+                <span>to</span><input type="date" ><br>
+              </div>
             </div>
+            <div class="clearfix"></div>
+            <hr>
+            <div class="categories">
+              <h3>
+                Categories
+                <button class="showmenu">
+                   <i class="fas fa-plus"></i>
+                </button>
+              </h3>
+              <div class="cateinput">
+                <input type="checkbox"> All<br>
+                <input type="checkbox"> Entertainment<br>
+                <input type="checkbox"> Food<br>
+                <input type="checkbox"> Learning<br>
+                <input type="checkbox"> Outdoors<br>
+              </div>
+            </div>
+            <hr>
           </div>
-          <div class="input-button">
-            <ul>
-              <li>
-                <button class="cancel-button"><i class="fas fa-times"></i>Cancel</button>
-              </li>
-              <li>
-                <button class="add-button"><i class="fas fa-plus"></i>Add Task</button>
-              </li>
-            </ul>
+          <div class="col col-lg-9 col-md-8 rightcontent">
+            <!-- Search Result information-->
+            <div class="contenttop">
+              <h2>Showing<b>15</b>results by...</h2>
+              <span>Koahsiung<i class="far fa-times-circle"></i></span>
+              <span>Entertainment<i class="far fa-times-circle"></i></span>
+            </div>
+            <!-- Search Result -->
+            <div class="contentmain">
+              <div class="card">
+                <div class="row">
+                  <div class="col col-lg-4 col-md-12 col-12 cardimg">
+                    <picture>
+                      <source srcset="image/1.jpg" media="(min-width: 1024px )">
+                      <source srcset="image/1-pad.jpg" media="(min-width: 768px )">
+                      <source srcset="image/1-pad.jpg" media="(min-width: 414px )">
+                    <img src="image/1.jpg" alt="">
+                    </picture>
+                  </div>
+                  <div class="col col-lg-8 col-md-12">
+                    <h3><a href="card.html">Kogi Cosby sweater.</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque recusandae magnam illo officia tempora veniam animi et! Vero rerum, similique.</p>
+                    <h4>Entan Foster <span>Entertainment</span></h4>
+                    <i class="fas fa-map-marker-alt"><span>Kaohsiung City</span></i>
+                    <i class="far fa-calendar-alt"><span>2018/5/24 - 2018/5/31</span></i>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="row">
+                  <div class="col col-lg-4 col-md-12 col-12 cardimg">
+                    <picture>
+                      <source srcset="image/2.jpg" media="(min-width: 1024px )">
+                      <source srcset="image/2-pad.jpg" media="(min-width: 768px )">
+                      <source srcset="image/2-pad.jpg" media="(min-width: 414px )">
+                      <img src="image/2.jpg" alt="">
+                    </picture>
+                  </div>
+                  <div class="col col-lg-8 col-md-12">
+                    <h3>In the tunultuous business.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque recusandae magnam illo officia tempora veniam animi et! Vero rerum, similique.</p>
+                    <h4>Herman Cobb <span>Entertainment</span></h4>
+                    <i class="fas fa-map-marker-alt"><span> Kaohsiung City</span></i>
+                    <i class="far fa-calendar-alt"><span> 2018/5/24 - 2018/5/31</span></i>
+                  </div>
+                </div>
+              </div>
+              <div class="card" id="card">
+                <div class="row">
+                  <div class="col col-lg-4 col-md-12 cardimg">
+                    <img src="image/3.jpg" alt="">
+                  </div>
+                  <div class="col col-lg-8 col-md-12">
+                    <h3>I have hinted that I would often jerk poor Queequeg from between the wha.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque recusandae magnam illo officia tempora veniam animi et! Vero rerum, similique.</p>
+                    <h4>Landon Powers <span>Entertainment</span></h4>
+                    <i class="fas fa-map-marker-alt"><span>Kaohsiung City</span></i>
+                    <i class="far fa-calendar-alt"><span>2018/5/24 - 2018/5/31</span></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
             <div class="clearfix"></div>
           </div>
-        </div>
-        <div class="list">
-          <div class="todo-list-star">
-            <div class="todo-list-title">
-              <p>
-              <i class="far fa-square"></i>
-              Type Something Here..
-              <i class="fas fa-pencil-alt"></i>
-              <i class="far fa-star"></i>
-              </p>
-            </div>
-            <div class="todo-list-cont">
-              <a href=""><i class="far fa-calendar-alt"> 5/14</i></a>
-              <a href=""><i class="far fa-file"></i></a>
-              <a href=""><i class="far fa-comment-dots"></i></a>
-            </div>  
-          </div>
-          <div class="todo-list-star">
-            <div class="todo-list-title">
-              <p>
-              <i class="far fa-square"></i>
-              Type Something Here..
-              <i class="fas fa-pencil-alt"></i>
-              <i class="far fa-star"></i>
-              
-              </p>
-            </div>
-            <div class="todo-list-cont">
-              <a href=""><i class="far fa-calendar-alt"> 5/14</i></a>
-              <a href=""><i class="far fa-file"></i></a>
-              <a href=""><i class="far fa-comment-dots"></i></a>
-            </div>  
-          </div>
-          <div class="todo-list">
-            <div class="todo-list-title">
-              <p>
-              <i class="far fa-square"></i>
-              Type Something Here..
-              <i class="fas fa-pencil-alt"></i>
-              <i class="far fa-star"></i>
-              </p>
-            </div>
-            <div class="todo-list-cont">
-              <a href=""><i class="far fa-calendar-alt"> 2019/6/18</i></a>
-            </div>  
-          </div>
-          <div class="todo-list">
-            <div class="todo-list-title">
-              <p>
-              <i class="far fa-square"></i>
-              Type Something Here..
-              <i class="fas fa-pencil-alt"></i>
-              <i class="far fa-star"></i>
-              </p>
-            </div>
-            <div class="todo-list-cont">
-              <a href=""><i class="far fa-file"></i></a>
-            </div>  
-          </div>
-          <div class="todo-list-delete">
-            <div class="todo-list-title">
-              <p>
-              <i class="far fa-square"></i>
-              <del>Type Something Here..</del>
-              <i class="fas fa-pencil-alt"></i>
-              <i class="far fa-star"></i>
-              </p>
-            </div>
-          </div>
-          <h3>4 tasks left</h3>
         </div>
       </div>
     </div>

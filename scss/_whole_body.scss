@@ -1,13 +1,17 @@
 /* whole body control*/
+@import "var";
+
 body {
   font-family: 'Roboto', Arial, Microsoft JhengHei, sans-serif;
 }
 
 .wrap {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
+  background: $lightgray;
 }
 
 .clearfix {
   clear: both;
 }
+

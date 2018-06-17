@@ -49,216 +49,341 @@ body {
   font-family: 'Roboto', Arial, Microsoft JhengHei, sans-serif; }
 
 .wrap {
-  max-width: 900px;
-  margin: 0 auto; }
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #f2f2f2; }
 
 .clearfix {
   clear: both; }
 
-/* Header CSS */
+/*header*/
 .header {
-  background: #4a90e2; }
-  .header .navbar {
-    max-width: 620px;
-    margin: 0 auto; }
-    .header .navbar ul li {
-      float: left;
-      width: 30%;
-      margin-left: 2%;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      text-align: center;
-      font-size: 24px; }
-      .header .navbar ul li a {
-        text-decoration: none;
-        color: #00408b; }
-    .header .navbar ul .active {
-      border-bottom: 5px solid #00408b; }
-      .header .navbar ul .active a {
-        color: #ffffff; }
+  background: #7828b4;
+  max-width: 1200px;
+  margin: 0 auto; }
+  .header .row {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 30px; }
+    @media (max-width: 414px) {
+      .header .row {
+        padding-left: 0px; } }
+    @media (max-width: 414px) {
+      .header .row .logo h1 {
+        padding-left: 120px; } }
+    .header .row .logo h1 a {
+      background: url(../image/logo.png);
+      display: block;
+      text-indent: 101%;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 152px;
+      height: 26px;
+      margin-top: 24px;
+      margin-bottom: 24px;
+      margin-left: 50px; }
+      @media (max-width: 768px) {
+        .header .row .logo h1 a {
+          margin-left: 0px; } }
+    .header .row .searchbar {
+      padding-top: 20px; }
+      @media (max-width: 414px) {
+        .header .row .searchbar {
+          background: #d7d7d7;
+          padding-bottom: 20px; } }
+      .header .row .searchbar .search {
+        border-bottom: 1px solid #ffffff;
+        width: 40%; }
+        @media (max-width: 414px) {
+          .header .row .searchbar .search {
+            border-bottom: 1px solid #000000;
+            width: 90%;
+            margin-left: 20px; } }
+        .header .row .searchbar .search span {
+          color: #ffffff; }
+          @media (max-width: 414px) {
+            .header .row .searchbar .search span {
+              color: #000000; } }
+        .header .row .searchbar .search input {
+          width: 70%;
+          border: none;
+          margin-left: 5px;
+          color: #ffffff;
+          background: #7828b4; }
+          @media (max-width: 414px) {
+            .header .row .searchbar .search input {
+              background: #d7d7d7; } }
 
-/* Content CSS */
-.content {
-  background: #e1e1e1;
-  padding-top: 23px;
-  padding-bottom: 120px; }
-  .content .type-area {
-    max-width: 620px;
-    margin: 0 auto;
-    background: #f2f2f2;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px; }
-    .content .type-area .title-input {
-      border-bottom: 2px solid #c8c8c8;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      padding-left: 32px; }
-      .content .type-area .title-input .fa-square {
-        margin-right: 16px;
-        font-size: 25px;
-        color: #ffffff; }
-      .content .type-area .title-input input {
-        font-size: 24px;
-        width: 50%; }
-      .content .type-area .title-input .fa-star, .content .type-area .title-input .fa-pencil-alt {
-        float: right;
-        margin-right: 32px;
-        font-size: 25px; }
-      .content .type-area .title-input .fa-pencil-alt {
-        color: #4a90e2; }
-    .content .type-area .time-input {
-      padding-left: 32px;
-      padding-top: 20px; }
-      .content .type-area .time-input h3 {
-        font-size: 20px; }
-        .content .type-area .time-input h3 i {
-          margin-right: 10px; }
-      .content .type-area .time-input input {
-        margin-top: 10px;
-        margin-left: 20px; }
-    .content .type-area .file {
-      padding-left: 32px;
-      padding-top: 20px; }
-      .content .type-area .file h3 {
-        font-size: 20px; }
-        .content .type-area .file h3 i {
-          margin-right: 10px; }
-      .content .type-area .file .file-upload {
-        font-size: 30px;
-        color: #c8c8c8;
-        margin-top: 10px;
-        margin-left: 20px; }
-        .content .type-area .file .file-upload #file-input {
-          display: none; }
-    .content .type-area .comment-input {
-      padding-left: 32px;
-      padding-top: 20px; }
-      .content .type-area .comment-input h3 {
-        font-size: 20px; }
-        .content .type-area .comment-input h3 i {
-          margin-right: 10px; }
-      .content .type-area .comment-input textarea {
-        margin-top: 10px;
-        margin-left: 20px;
-        margin-bottom: 24px; }
-  .content .input-button {
-    max-width: 620px;
-    margin: 0 auto; }
-    .content .input-button ul li {
-      float: left;
-      width: 50%; }
-      .content .input-button ul li .cancel-button, .content .input-button ul li .add-button {
-        width: 100%;
-        font-size: 20px;
-        border: none;
-        padding-top: 20px;
-        padding-bottom: 20px; }
-        .content .input-button ul li .cancel-button i, .content .input-button ul li .add-button i {
-          margin-right: 15px; }
-      .content .input-button ul li .cancel-button {
-        color: #d0021b;
-        border-bottom-left-radius: 10px; }
-      .content .input-button ul li .add-button {
-        color: #ffffff;
-        background: #4a90e2;
-        border-bottom-right-radius: 10px; }
-  .content .add-task {
-    max-width: 620px;
-    margin: 0 auto;
-    border-radius: 5px;
-    border: 1px solid #e1e1e1;
-    margin-top: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 32px;
-    background: #ffffff; }
-    .content .add-task h2 {
-      color: #c8c8c8;
-      font-size: 25px; }
-  .content .list {
-    max-width: 620px;
-    margin: 0 auto; }
-    .content .list .todo-list-star {
-      border-radius: 10px;
-      margin-top: 20px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      padding-left: 32px;
-      background: #fff2dc; }
-      .content .list .todo-list-star .todo-list-title .fa-square {
-        margin-right: 16px;
-        font-size: 25px;
-        color: #ffffff; }
-      .content .list .todo-list-star .todo-list-title p {
-        font-size: 20px; }
-      .content .list .todo-list-star .todo-list-title .fa-star, .content .list .todo-list-star .todo-list-title .fa-pencil-alt {
-        float: right;
-        margin-right: 32px;
-        font-size: 20px; }
-      .content .list .todo-list-star .todo-list-title .fa-star {
-        color: #f5a623; }
-      .content .list .todo-list-star .todo-list-cont {
-        padding-top: 15px;
-        padding-left: 40px; }
-        .content .list .todo-list-star .todo-list-cont a {
-          color: #757575; }
-          .content .list .todo-list-star .todo-list-cont a i {
-            padding-left: 10px;
-            padding-right: 5px; }
-    .content .list .todo-list {
-      border-radius: 10px;
-      margin-top: 20px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      padding-left: 32px;
-      background: #f2f2f2; }
-      .content .list .todo-list .todo-list-title .fa-square {
-        margin-right: 16px;
-        font-size: 25px;
-        color: #ffffff; }
-      .content .list .todo-list .todo-list-title p {
-        font-size: 20px; }
-      .content .list .todo-list .todo-list-title .fa-star, .content .list .todo-list .todo-list-title .fa-pencil-alt {
-        float: right;
-        margin-right: 32px;
-        font-size: 20px; }
-      .content .list .todo-list .todo-list-cont {
-        padding-top: 15px;
-        padding-left: 40px; }
-        .content .list .todo-list .todo-list-cont a {
-          color: #757575; }
-          .content .list .todo-list .todo-list-cont a i {
-            padding-left: 10px;
-            padding-right: 5px; }
-    .content .list .todo-list-delete {
-      border-radius: 10px;
-      margin-top: 20px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      padding-left: 32px;
-      background: #f2f2f2; }
-      .content .list .todo-list-delete .todo-list-title .fa-square {
-        margin-right: 16px;
-        font-size: 25px;
-        color: #ffffff; }
-      .content .list .todo-list-delete .todo-list-title p {
-        font-size: 20px; }
-        .content .list .todo-list-delete .todo-list-title p del {
-          color: #c8c8c8; }
-        .content .list .todo-list-delete .todo-list-title p .fa-star, .content .list .todo-list-delete .todo-list-title p .fa-pencil-alt {
+/*content*/
+.content .row {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 30px; }
+  @media (max-width: 768px) {
+    .content .row {
+      padding-left: 0px; } }
+  .content .row .leftsearch {
+    background: #ebebeb;
+    max-height: 540px; }
+    .content .row .leftsearch h3 {
+      font-size: 20px;
+      padding-top: 24px; }
+    .content .row .leftsearch hr {
+      margin: 30px 0px 0px 0px; }
+    .content .row .leftsearch .location h3 .showmenu {
+      display: none; }
+      @media (max-width: 414px) {
+        .content .row .leftsearch .location h3 .showmenu {
+          display: block;
           float: right;
-          margin-right: 32px;
-          font-size: 20px; }
-      .content .list .todo-list-delete .todo-list-cont {
-        padding-top: 15px;
-        padding-left: 40px; }
-        .content .list .todo-list-delete .todo-list-cont a {
-          color: #757575; }
-          .content .list .todo-list-delete .todo-list-cont a i {
-            padding-left: 10px;
-            padding-right: 5px; }
-    .content .list h3 {
+          background: none;
+          border: none; } }
+      @media (max-width: 414px) {
+        .content .row .leftsearch .location h3 .showmenu .incon-bar {
+          background-color: #ffffff;
+          display: block;
+          height: 4px;
+          margin: 0 auto 4px;
+          width: 30px; } }
+    .content .row .leftsearch .location .locationselect {
+      max-height: 150px; }
+      @media (max-width: 414px) {
+        .content .row .leftsearch .location .locationselect {
+          max-height: 0px;
+          overflow: hidden;
+          -webkit-transition: max-height 0.5s;
+          -o-transition: max-height 0.5s;
+          transition: max-height 0.5s;
+          margin-top: 1px;
+          position: absolute;
+          z-index: 100;
+          top: 55px;
+          left: 0;
+          right: 0;
+          background: #ebebeb; } }
+      .content .row .leftsearch .location .locationselect select {
+        border: none;
+        background: #ffffff;
+        width: 90%;
+        height: 40px; }
+        @media (max-width: 414px) {
+          .content .row .leftsearch .location .locationselect select {
+            margin-left: 20px; } }
+    .content .row .leftsearch .date {
+      text-align: right;
+      float: left; }
+      @media (max-width: 414px) {
+        .content .row .leftsearch .date {
+          float: none; } }
+      .content .row .leftsearch .date h3 {
+        text-align: left; }
+        .content .row .leftsearch .date h3 .showmenu {
+          display: none; }
+          @media (max-width: 414px) {
+            .content .row .leftsearch .date h3 .showmenu {
+              display: block;
+              float: right;
+              background: none;
+              border: none; } }
+          @media (max-width: 414px) {
+            .content .row .leftsearch .date h3 .showmenu .incon-bar {
+              background-color: #ffffff;
+              display: block;
+              height: 4px;
+              margin: 0 auto 4px;
+              width: 30px; } }
+      @media (max-width: 414px) {
+        .content .row .leftsearch .date .dateinput {
+          max-height: 0px;
+          overflow: hidden;
+          -webkit-transition: max-height 0.5s;
+          -o-transition: max-height 0.5s;
+          transition: max-height 0.5s;
+          margin-top: 1px;
+          position: absolute;
+          z-index: 100;
+          top: 55px;
+          left: 0;
+          right: 0;
+          background: rgba(0, 0, 0, 0.9); } }
+      .content .row .leftsearch .date .dateinput span {
+        padding-right: 10px; }
+      .content .row .leftsearch .date .dateinput input {
+        margin-top: 10px;
+        border: none;
+        background: #ffffff;
+        height: 40px; }
+    .content .row .leftsearch .categories h3 .showmenu {
+      display: none; }
+      @media (max-width: 414px) {
+        .content .row .leftsearch .categories h3 .showmenu {
+          display: block;
+          float: right;
+          background: none;
+          border: none; } }
+      @media (max-width: 414px) {
+        .content .row .leftsearch .categories h3 .showmenu .incon-bar {
+          background-color: #ffffff;
+          display: block;
+          height: 4px;
+          margin: 0 auto 4px;
+          width: 30px; } }
+    @media (max-width: 414px) {
+      .content .row .leftsearch .categories .cateinput {
+        max-height: 0px;
+        overflow: hidden;
+        -webkit-transition: max-height 0.5s;
+        -o-transition: max-height 0.5s;
+        transition: max-height 0.5s;
+        margin-top: 1px;
+        position: absolute;
+        z-index: 100;
+        top: 55px;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9); } }
+  @media (max-width: 768px) {
+    .content .row .rightcontent {
+      padding-left: 20px; } }
+  .content .row .rightcontent .contenttop {
+    margin-bottom: 24px; }
+    @media (max-width: 414px) {
+      .content .row .rightcontent .contenttop {
+        display: none; } }
+    .content .row .rightcontent .contenttop h2 {
+      font-size: 30px;
+      padding-top: 10px;
+      padding-left: 10px; }
+      .content .row .rightcontent .contenttop h2 b {
+        color: #9013fe;
+        padding: 0px 5px 0px 5px; }
+    .content .row .rightcontent .contenttop span {
+      border: 1px solid #9013fe;
+      color: #9013fe;
+      padding: 5px 10px 5px 10px;
+      border-radius: 20px; }
+      .content .row .rightcontent .contenttop span i {
+        margin-left: 10px; }
+  .content .row .rightcontent .cardcontenttop h3 {
+    margin: 24px 40px 24px 40px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 16px;
+    font-size: 16px;
+    color: #9013fe;
+    background: #ebebeb; }
+    @media (max-width: 768px) {
+      .content .row .rightcontent .cardcontenttop h3 {
+        margin-left: 0px;
+        margin-right: 0px; } }
+    .content .row .rightcontent .cardcontenttop h3 span {
+      color: #9b9b9b; }
+  .content .row .rightcontent .contentmain {
+    padding-left: 10px; }
+    .content .row .rightcontent .contentmain .card {
+      margin-bottom: 20px; }
+      @media (max-width: 768px) {
+        .content .row .rightcontent .contentmain .card {
+          margin-right: 40px; } }
+      @media (max-width: 414px) {
+        .content .row .rightcontent .contentmain .card {
+          margin-top: 20px; } }
+      @media (max-width: 768px) {
+        .content .row .rightcontent .contentmain .card .cardimg {
+          padding: 0px; } }
+      @media (max-width: 768px) {
+        .content .row .rightcontent .contentmain .card .cardimg img {
+          width: 100%; } }
+      .content .row .rightcontent .contentmain .card h3 {
+        padding-top: 20px;
+        font-size: 24px;
+        color: #9013fe; }
+        .content .row .rightcontent .contentmain .card h3 a {
+          text-decoration: none;
+          color: #9013fe; }
+      .content .row .rightcontent .contentmain .card p {
+        font-size: 16px; }
+      .content .row .rightcontent .contentmain .card h4 {
+        font-size: 16px; }
+        .content .row .rightcontent .contentmain .card h4 span {
+          margin-left: 20px;
+          border-radius: 15px;
+          color: #ffffff;
+          background: #d7d7d7;
+          padding: 5px 15px 5px 15px;
+          font-style: italic; }
+      .content .row .rightcontent .contentmain .card i {
+        font-size: 16px;
+        margin-right: 20px; }
+        @media (max-width: 768px) {
+          .content .row .rightcontent .contentmain .card i {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 15px; } }
+        .content .row .rightcontent .contentmain .card i span {
+          margin-left: 10px;
+          color: #9b9b9b; }
+    @media (max-width: 768px) {
+      .content .row .rightcontent .contentmain #card {
+        display: none; } }
+  .content .row .rightcontent .cardconten {
+    margin-left: 40px;
+    margin-right: 40px;
+    background: #ffffff; }
+    @media (max-width: 768px) {
+      .content .row .rightcontent .cardconten {
+        margin-left: 0px;
+        margin-right: 0px; } }
+    .content .row .rightcontent .cardconten h2 {
+      margin-left: 66px;
       margin-top: 20px;
-      padding-left: 30px;
-      color: #c8c8c8;
-      font-size: 20px; }
+      color: #9013fe; }
+      @media (max-width: 768px) {
+        .content .row .rightcontent .cardconten h2 {
+          margin-left: 20px; } }
+    .content .row .rightcontent .cardconten h4 {
+      font-size: 16px;
+      margin-left: 66px;
+      margin-top: 20px; }
+      @media (max-width: 768px) {
+        .content .row .rightcontent .cardconten h4 {
+          margin-left: 20px; } }
+      .content .row .rightcontent .cardconten h4 span {
+        margin-left: 20px;
+        border-radius: 15px;
+        color: #ffffff;
+        background: #d7d7d7;
+        padding: 5px 15px 5px 15px;
+        font-style: italic; }
+    .content .row .rightcontent .cardconten p {
+      margin: 24px 66px 24px 66px;
+      padding-bottom: 12px; }
+      @media (max-width: 768px) {
+        .content .row .rightcontent .cardconten p {
+          margin-left: 20px;
+          margin-right: 20px; } }
+    .content .row .rightcontent .cardconten .contenicon {
+      margin-left: 66px; }
+      @media (max-width: 768px) {
+        .content .row .rightcontent .cardconten .contenicon {
+          margin-left: 20px; } }
+      .content .row .rightcontent .cardconten .contenicon i {
+        font-size: 16px;
+        margin-right: 20px; }
+        .content .row .rightcontent .cardconten .contenicon i span {
+          margin-left: 10px;
+          color: #9b9b9b; }
+  .content .row .rightcontent nav {
+    float: right; }
+    @media (max-width: 414px) {
+      .content .row .rightcontent nav {
+        float: left;
+        margin-left: 40px; } }
+    @media (max-width: 768px) {
+      .content .row .rightcontent nav {
+        margin-right: 40px; } }
+    .content .row .rightcontent nav li :hover {
+      background: #9013fe;
+      color: #ffffff; }
+    .content .row .rightcontent nav li a {
+      color: #9013fe; }

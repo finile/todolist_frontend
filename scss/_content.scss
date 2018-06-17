@@ -1,249 +1,348 @@
 @import "var";
+@import "grid";
+/*content*/ 
 
-/* Content CSS */ 
 .content {
-  background: $whitegray;
-  padding-top: 23px;
-  padding-bottom: 120px;
-  .type-area{
-    max-width: 620px;
+
+  .row{
+    max-width: 1200px;
     margin: 0 auto;
-    background: $lightgray;
-    border-top-right-radius: 10px; 
-    border-top-left-radius:10px ;
-    .title-input{
-      border-bottom: 2px solid $mediumgray;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      padding-left: 32px;
-      .fa-square {
-        margin-right: 16px;
-        font-size: 25px;
-        color: $white;
-      }
-      input {
-        font-size: 24px;
-        width: 50%;
-      }
-      .fa-star, .fa-pencil-alt {
-        float: right;
-        margin-right: 32px;
-        font-size: 25px;
-      }
-      .fa-pencil-alt {
-        color: $lightblue;
-      }
+    padding-left: 30px;
+    @include pad(){
+      padding-left: 0px;
     }
-    .time-input{
-      padding-left: 32px;
-      padding-top: 20px;
+    .leftsearch{
+      background: $mediumgray;
+      max-height: 540px;
       h3{
         font-size: 20px;
-        i{
-          margin-right: 10px;
+        padding-top: 24px;
+      }
+      hr{
+        margin:30px 0px 0px 0px;
+
+      }
+      .location{
+        h3{
+          .showmenu{
+            display: none;
+            @include iphone(){
+              display: block;
+              float: right;
+              background: none;
+              border: none;
+            }
+            .incon-bar{ 
+              @include iphone(){
+                background-color: #ffffff;
+                display: block;
+                height: 4px;
+                margin: 0 auto 4px;
+                width: 30px;
+              }
+            }
+          }
+        }
+        .locationselect{
+          max-height: 150px;
+          @include iphone(){
+            max-height: 0px;
+            overflow: hidden;
+            transition: max-height 0.5s;
+            margin-top: 1px;
+            position: absolute;
+            z-index: 100;
+            top: 55px;
+            left: 0;
+            right: 0;
+            background: $mediumgray;
+          }
+          select{
+            border:none;
+            background: $white;
+            width: 90%;
+            height: 40px;
+            @include iphone(){
+              margin-left: 20px;
+            }
+          }
         }
       }
-      input{
-        margin-top: 10px;
-        margin-left: 20px;
+      .date{
+        text-align: right;
+        float: left;
+        @include iphone(){
+          float: none;    
+        }
+        h3{
+          text-align: left;
+          .showmenu{
+            display: none;
+            @include iphone(){
+              display: block;
+              float: right;
+              background: none;
+              border: none;
+            }
+            .incon-bar{
+              @include iphone(){
+                background-color: #ffffff;
+                display: block;
+                height: 4px;
+                margin: 0 auto 4px;
+                width: 30px;
+              }
+            }
+          }
+        }
+        .dateinput{
+          @include iphone(){
+            max-height: 0px;
+            overflow: hidden;
+            transition: max-height 0.5s;
+            margin-top: 1px;
+            position: absolute;
+            z-index: 100;
+            top: 55px;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.9);
+          }
+          span{
+            padding-right: 10px;
+
+          }
+          input{
+            margin-top: 10px;
+            border: none;
+            background: $white;
+            height: 40px;
+          }
+        }
+      }
+      .categories{
+        h3{
+          .showmenu{
+            display: none;
+            @include iphone(){
+              display: block;
+              float: right;
+              background: none;
+              border: none;
+            }
+            .incon-bar{
+              @include iphone(){
+              background-color: #ffffff;
+              display: block;
+              height: 4px;
+              margin: 0 auto 4px;
+              width: 30px;
+              }
+            }
+          }
+        }
+        .cateinput{
+            @include iphone(){
+            max-height: 0px;
+            overflow: hidden;
+            transition: max-height 0.5s;
+            margin-top: 1px;
+            position: absolute;
+            z-index: 100;
+            top: 55px;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.9);
+          }
+        }
       }
     }
-    .file{
-      padding-left: 32px;
-      padding-top: 20px;
-      h3{
-        font-size: 20px;
-        i{
-          margin-right: 10px;
-        }
+
+    .rightcontent{
+      @include pad(){
+        padding-left: 20px;
       }
-      .file-upload{
-        font-size: 30px;
-        color:$mediumgray;
-        margin-top: 10px;
-        margin-left: 20px;
-        #file-input{
+      .contenttop{
+        margin-bottom: 24px;
+        @include iphone(){
           display: none;
         }
-      }
-    }
-    .comment-input{
-      padding-left: 32px;
-      padding-top: 20px;
-      h3{
-        font-size: 20px;
-        i{
-          margin-right: 10px;
-        }
-      }
-      textarea{
-        margin-top: 10px;
-        margin-left: 20px;
-        margin-bottom: 24px;
-      }
-    }
-  }
-  .input-button{
-    max-width: 620px;
-    margin: 0 auto;
-    ul{
-      li{
-        float: left;
-        width: 50%;
-        .cancel-button, .add-button {
-          width: 100%;
-          font-size: 20px;
-          border: none;
-          padding-top: 20px;
-          padding-bottom: 20px;
-          i{
-            margin-right: 15px;
+        h2{
+          font-size: 30px;
+          padding-top: 10px;
+          padding-left: 10px;
+          b{
+            color: $lightpurple;
+            padding:0px 5px 0px 5px;
           }
         }
-        .cancel-button{
-          color:$red;
-          border-bottom-left-radius:10px ;
-        }
-        .add-button {
-          color:$white;
-          background: $lightblue;
-          border-bottom-right-radius: 10px; 
+        span{
+          border:1px solid $lightpurple;
+          color:$lightpurple;
+          padding: 5px 10px 5px 10px;
+          border-radius: 20px;
+          i{
+            margin-left: 10px;
+          }
         }
       }
-    }
-  }
-  .add-task{
-    max-width: 620px;
-    margin: 0 auto;
-    border-radius: 5px;
-    border:1px solid $whitegray;
-    margin-top: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 32px;
-    background: $white;
-    h2{
-      color:$mediumgray;
-      font-size: 25px;
+      .cardcontenttop{
+        h3{
+          margin: 24px 40px 24px 40px;
+          padding-top: 13px;
+          padding-bottom: 13px;
+          padding-left: 16px;
+          font-size: 16px;
+          color:$lightpurple;
+          background: $mediumgray;
+          @include pad(){
+          margin-left: 0px;
+          margin-right: 0px;
+          }
+          span{
+            color:$darkgray;
+          }
+        }
+      }
+      .contentmain{
+        padding-left: 10px;
+        .card{
+          margin-bottom: 20px;
+          @include pad(){
+            margin-right: 40px;
+          }
+          @include iphone(){
+            margin-top: 20px;
+          }
+          .cardimg{
+            @include pad(){
+              padding: 0px;
+            }
+            img{
+              @include pad(){
+                width: 100%;
+              }
+            }
+          }
+          h3{
+            padding-top: 20px;
+            font-size: 24px;
+            color:$lightpurple;
+            a{
+              text-decoration: none;
+              color:$lightpurple;
+            }
+          }
+          p{
+            font-size: 16px;
+          }
+          h4{
+            font-size: 16px;
+            span{
+              margin-left: 20px;
+              border-radius: 15px;
+              color:$white;
+              background: $gray;
+              padding: 5px 15px 5px 15px;
+              font-style: italic;
+            }
+          }
+          i {
+            font-size: 16px;
+            margin-right: 20px;
+            @include pad(){
+              display: block;
+              margin-top: 15px;
+              margin-bottom: 15px;
+            }
+            span{
+              margin-left: 10px;
+              color: $darkgray;
+            }
+          }
+        }
+        #card {
+          @include pad(){
+            display: none;
+          }
+        }
+      }
+      .cardconten{
+        margin-left: 40px;
+        margin-right: 40px;
+        background: $white;
+        @include pad(){
+          margin-left: 0px;
+          margin-right: 0px;
+        }
+        h2{
+          margin-left: 66px;
+          margin-top: 20px;
+          color:$lightpurple;
+          @include pad(){
+            margin-left: 20px;
+          }
+        }
+        h4{
+          font-size: 16px;
+          margin-left: 66px;
+          margin-top: 20px;
+          @include pad(){
+            margin-left: 20px;
+          }
+          span{
+            margin-left: 20px;
+            border-radius: 15px;
+            color:$white;
+            background: $gray;
+            padding: 5px 15px 5px 15px;
+            font-style: italic;
+          }
+        }
+        p{
+          margin: 24px 66px 24px 66px;
+          padding-bottom: 12px;
+          @include pad(){
+            margin-left: 20px;
+            margin-right: 20px;
+          }
 
-    }
-  }
-  .list {
-    max-width: 620px;
-    margin: 0 auto;
-    .todo-list-star{
-      border-radius: 10px;
-      margin-top: 20px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      padding-left: 32px;
-      background: $lightorange;
-      .todo-list-title{
-        .fa-square {
-          margin-right: 16px;
-          font-size: 25px;
-          color: $white;
         }
-        p {
-          font-size: 20px;
+        .contenicon{
+          margin-left: 66px;
+           @include pad(){
+            margin-left: 20px;
+          }
+          i {
+            font-size: 16px;
+            margin-right: 20px;
+            span{
+              margin-left: 10px;
+              color: $darkgray;
+            }
+          }  
         }
-        .fa-star, .fa-pencil-alt {
-          float: right;
-          margin-right: 32px;
-          font-size: 20px;
-        }
-        .fa-star {
-          color: $orange;
-        }
+        
       }
-      .todo-list-cont{
-        padding-top: 15px;
-        padding-left: 40px;
-        a{
-          color:$gray;
-          i{
-            padding-left: 10px;
-            padding-right: 5px;
+      nav{
+        float: right;
+        @include iphone(){
+          float:left;
+          margin-left: 40px;
+        }
+        @include pad(){
+          margin-right: 40px;
+        }
+        li{
+          :hover{
+            background: $lightpurple;
+            color:$white;
+          }
+          a {
+          color: $lightpurple;
           }
         }
       }
-    }
-    .todo-list{
-      border-radius: 10px;
-      margin-top: 20px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      padding-left: 32px;
-      background: $lightgray;
-      .todo-list-title{
-        .fa-square {
-          margin-right: 16px;
-          font-size: 25px;
-          color: $white;
-        }
-        p {
-          font-size: 20px;
-        }
-        .fa-star, .fa-pencil-alt {
-          float: right;
-          margin-right: 32px;
-          font-size: 20px;
-        }
-      }
-      .todo-list-cont{
-        padding-top: 15px;
-        padding-left: 40px;
-        a{
-          color:$gray;
-          i{
-            padding-left: 10px;
-            padding-right: 5px;
-          }
-        }
-      }
-    }
-    .todo-list-delete{
-      border-radius: 10px;
-      margin-top: 20px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      padding-left: 32px;
-      background: $lightgray;
-      .todo-list-title{
-        .fa-square {
-          margin-right: 16px;
-          font-size: 25px;
-          color: $white;
-        }
-        p {
-          font-size: 20px;
-          del{
-            color: $mediumgray;
-          }
-          .fa-star, .fa-pencil-alt {
-            float: right;
-            margin-right: 32px;
-            font-size: 20px;
-          }
-        }
-      }
-      .todo-list-cont{
-        padding-top: 15px;
-        padding-left: 40px;
-        a{
-          color:$gray;
-          i{
-            padding-left: 10px;
-            padding-right: 5px;
-          }
-        }
-      }
-    }
-    h3 {
-      margin-top: 20px;
-      padding-left: 30px;
-      color: $mediumgray;
-      font-size: 20px;
     }
   }
 }
